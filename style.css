@@ -1,0 +1,288 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=La+Belle+Aurore&family=Lobster&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;900&family=Source+Sans+Pro:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.theme, footer, .cars-card, .cars, #cars-section, #images, #slogan, header nav, #exterior, #interior {
+  display: flex;
+  align-items: center;
+}
+
+.hover, #cars-section button:hover, #images-first:hover, #images-first, #slogan button:hover, #exterior button:hover, #interior button:hover {
+  cursor: pointer;
+  transition: 0.5s all;
+}
+
+.başlık, .cars-card img h4, #cars-section h1, #slogan h2, #slogan h1, #exterior h1, #interior h1 {
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+  letter-spacing: 3px;
+}
+
+#exterior, #interior {
+  height: 60vh;
+  color: white;
+  justify-content: center;
+  gap: 40px;
+  flex-direction: column;
+}
+#exterior h1, #interior h1 {
+  font-size: 35px;
+  padding-top: 40px;
+}
+#exterior p, #interior p {
+  font-size: 24px;
+  max-width: 500px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  #exterior p, #interior p {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+}
+#exterior button, #interior button {
+  padding: 20px 50px;
+  color: white;
+  letter-spacing: 5px;
+  background-color: transparent;
+  border: 2px solid white;
+  font-weight: 700;
+  transition: background-color 0.5s;
+}
+#exterior button:hover, #interior button:hover {
+  background-color: white;
+  color: black;
+}
+
+body {
+  background-color: #eaeaea;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+header nav {
+  padding: 20px 40px;
+}
+header nav a {
+  text-decoration: none;
+  white-space: nowrap;
+  color: #252a34;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+header nav a:hover {
+  color: #e50000 !important;
+  text-shadow: 2px 2px 10px #e50000;
+  transition: 0.5s;
+}
+header #nav-left img {
+  max-width: 50px;
+}
+header #nav-left a {
+  font-size: 15px;
+  font-weight: 600;
+  border-right: 1px solid;
+  padding: 0 10px;
+}
+@media (max-width: 768px) {
+  header #nav-left a {
+    font-size: 11px;
+  }
+}
+header #nav-right a {
+  font-size: 14px;
+  color: gray;
+  padding: 0 10px;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  header #nav-right a {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  header #nav-right a {
+    display: none;
+  }
+}
+header #nav-ikon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  color: black;
+  font-size: 25px;
+  opacity: 0;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  header #nav-ikon {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  header #nav-ikon {
+    opacity: 1;
+  }
+}
+
+.hero {
+  background: linear-gradient(to top, #eaeaea 60%, rgb(215, 215, 215) 60%);
+  padding: 90px;
+  display: flex;
+  justify-content: space-between;
+  min-height: calc(100vh - 68px);
+}
+@media (max-width: 768px) {
+  .hero {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .hero {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+#slogan {
+  flex-direction: column;
+  gap: 70px;
+  max-width: 500px;
+}
+#slogan h1 {
+  font-size: 30px;
+}
+#slogan p {
+  font-size: 20px;
+  text-align: center;
+}
+#slogan img {
+  max-width: 200px;
+  mix-blend-mode: darken;
+}
+#slogan h2 {
+  font-size: 26px;
+  margin-top: 100px;
+}
+#slogan button {
+  background-color: #e50000;
+  padding: 10px 50px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 3px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s background-color;
+}
+#slogan button:hover {
+  background-color: rgb(160, 0, 0);
+}
+
+#images {
+  flex-direction: column;
+  gap: 50px;
+  justify-content: space-between;
+}
+#images-first {
+  max-width: 750px;
+}
+@media (max-width: 768px) {
+  #images-first {
+    max-width: 400px;
+    padding-top: 30px;
+  }
+}
+#images-first:hover {
+  transform: translate(-150px, 50px);
+}
+#images-second {
+  max-width: 400px;
+  mix-blend-mode: darken;
+}
+@media (max-width: 768px) {
+  #images-second {
+    max-width: 300px;
+  }
+}
+#images p {
+  max-width: 500px;
+  text-align: center;
+}
+
+#interior {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 10%, black), url(/imgs/interior.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#exterior {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.5) 10%, black), url(/imgs/exterior-4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#cars-section {
+  margin: 100px 0;
+  flex-direction: column;
+}
+#cars-section h1 {
+  text-align: center;
+}
+#cars-section button {
+  background-color: #08d9d6;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+#cars-section button:hover {
+  background-color: blue;
+  color: white;
+}
+
+.cars {
+  padding: 10px 70px;
+  gap: 50px;
+}
+@media (max-width: 768px) {
+  .cars {
+    flex-direction: column;
+  }
+}
+.cars-card {
+  width: 400px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .cars-card {
+    width: 210px;
+  }
+}
+.cars-card img {
+  width: 100%;
+  mix-blend-mode: darken;
+}
+footer {
+  background-color: black;
+  justify-content: center;
+  padding: 20px 30px;
+}
+footer img {
+  max-width: 150px;
+}
+footer p {
+  color: white;
+  font-size: 15px;
+}/*# sourceMappingURL=style.css.map */
